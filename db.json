@@ -5,7 +5,7 @@
         "name": "Dragon Ball Super: Super Hero",
         "rating": "4/5",
         "genre": "Anime",
-        "image": "./images/dragonball.jpg" *testing*
+        "image": "./images/dragonball.jpg" 
       },
       {
         "id": 2,
