@@ -1,0 +1,42 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "name": "Dragon Ball Super: Super Hero",
+        "rating": "4/5",
+        "genre": "Anime",
+        "image": "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/filters_quality95formatwebp.jpg"
+      },
+      {
+        "id": 2,
+        "name": "A Haunted House 2",
+        "rating": "4/5",
+        "genre": "Horror/Comedy",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/3f/A_Haunted_House_2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "How The Grinch Stole Christmas",
+        "rating": "4/5",
+        "genre": "Family/Comedy",
+        "image": "https://m.media-amazon.com/images/I/818oNS8C3TL._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Terrifier 3",
+        "rating": "3/5",
+        "genre": "Horror",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/51/Terrifier_3_poster.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Hocus Pocus",
+        "rating": "5/5",
+        "genre": "Family/Comedy",
+        "image": "https://static.wikia.nocookie.net/hocuspocus/images/4/47/Hocus_Pocus_poster_2.jpg/revision/latest/scale-to-width-down/1200?cb=20220911122635"
+      }
+    ]
+  }
+  
+  
+  
