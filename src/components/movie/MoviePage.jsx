@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from "react";
-import MovieList from "./MovieList";
-import Search from "../Search";
-import { Outlet } from "react-router-dom";
+import MovieList from "./MovieList"
+import Search from "./Search"
 
 function MoviePage() {
     const [movies, setMovies] = useState([]);
-    const [searchQuery, setSearchQuery] = useState("");
+    const [search, setSearch] = useState([]);
 
-
-
+    //fetch movies 
     useEffect(() => {
         fetch("http://localhost:6001/movies")
             .then((response) => response.json())
             .then((data) => setMovies(data))
-            .catch((error) => { console.log(error) })
+            .catch((error) => console.log("Error", error));
     }, []);
 
+    //handles search input
     const handleSearch = (query) => setSearchQuery(query.toLowerCase());
 
-    const filteredMovies = movies.filter((movie) =>
-        movie.name.toLowerCase().includes(searchQuery)
-    );
 
     return (
         <main>
             <Search onSearch={handleSearch} />
-            <MovieList movies={filteredMovies} />
+            <MovieList movies={movies} />
         </main>
     );
 }

@@ -130,7 +130,8 @@ header h1 {
 }
 
 .searchbar {
-    padding: 1rem;
+    border: 1px solid;
+    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
 }
