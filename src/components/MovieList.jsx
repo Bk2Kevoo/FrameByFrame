@@ -8,7 +8,7 @@ function MovieList({ movies }) {
             movie={movie} />
     )
     return (
-        <ul className="grid">
+        <ul className="cards">
             {movieCards}
         </ul>
     )
