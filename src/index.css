@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 
+.app {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+main {
+    padding: 0 1rem;
+}
+
 body {
     font-family: "Playfair Display", serif;
     color: black;
 }
+
 
 header h1 {
     font-size: 2.5em;
@@ -96,4 +106,30 @@ header h1 {
 
 .details-button:hover {
     background-color: #00aeff;
+}
+
+.searchbar {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input {
+    padding: 0.25rem;
+    border: none;
+    font-family: inherit;
+    font-size: 1.2em;
+    border-bottom: 2px solid gray;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--green);
 }

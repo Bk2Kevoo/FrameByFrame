@@ -1,49 +1,60 @@
 {
-    "movies": [
-      {
-        "id": 1,
-        "name": "Dragon Ball Super: Super Hero",
-        "rating": "4/5",
-        "genre": "Anime",
-        "image": "./images/dragonball.jpg" 
-      },
-      {
-        "id": 2,
-        "name": "A Haunted House 2",
-        "rating": "4/5",
-        "genre": "Horror/Comedy",
-        "image": "./images/A_Haunted_House_2.jpg"
-      },
-      {
-        "id": 3,
-        "name": "How The Grinch Stole Christmas",
-        "rating": "4/5",
-        "genre": "Family/Comedy",
-        "image": "./images/TheGrinch.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Terrifier 3",
-        "rating": "3/5",
-        "genre": "Horror",
-        "image": "./images/Terrifier3.png"
-      },
-      {
-        "id": 5,
-        "name": "Hocus Pocus",
-        "rating": "5/5",
-        "genre": "Family/Comedy",
-        "image": "./images/HocusPocus.png"
-      },
-      {
-        "id": 6,
-        "name": "Beetlejuice",
-        "rating": "4/5",
-        "genre": "Comedy/Horror",
-        "image": "./images/Beetlejuice.png"
-      }
-    ]
-  }
-  
-  
-  
+  "movies": [
+    {
+      "id": 1,
+      "name": "Dragon Ball Super: Super Hero",
+      "rating": "4/5",
+      "genre": "Anime",
+      "image": "./images/dragonball.jpg"
+    },
+    {
+      "id": 2,
+      "name": "A Haunted House 2",
+      "rating": "4/5",
+      "genre": "Horror/Comedy",
+      "image": "./images/A_Haunted_House_2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "How The Grinch Stole Christmas",
+      "rating": "4/5",
+      "genre": "Family/Comedy",
+      "image": "./images/TheGrinch.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Terrifier 3",
+      "rating": "3/5",
+      "genre": "Horror",
+      "image": "./images/Terrifier3.png"
+    },
+    {
+      "id": 5,
+      "name": "Hocus Pocus",
+      "rating": "5/5",
+      "genre": "Family/Comedy",
+      "image": "./images/HocusPocus.png"
+    },
+    {
+      "id": 6,
+      "name": "Beetlejuice",
+      "rating": "4/5",
+      "genre": "Comedy/Horror",
+      "image": "./images/Beetlejuice.png"
+    },
+    {
+      "id": 7,
+      "name": "War for the Planet of the Apes",
+      "rating": "4/5",
+      "genre": "Action/Sci-fi",
+      "image": "./images/War.jpg"
+    },
+    {
+      "id": 8,
+      "name": "The Dark Knight",
+      "rating": "5/5",
+      "genre": " Action/Crime",
+      "image": "./images/TheDarkKnight.jpg"
+    }
+  ]
+}
