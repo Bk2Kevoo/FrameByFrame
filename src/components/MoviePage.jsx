@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList"
-// import Search from "./Search"
+import Search from "./Search"
 
 function MoviePage() {
     const [movies, setMovies] = useState([]);
+    const [search, setSearch] = useState([]);
 
 
 
@@ -14,14 +15,15 @@ function MoviePage() {
             .catch((error) => { console.log(error) })
     }, []);
 
+    const handleSearch = (query) => setSearchQuery(query.toLowerCase());
 
 
     return (
         <main>
-            {/* <Search /> */}
+            <Search onSearch={handleSearch} />
             <MovieList movies={movies} />
         </main>
-    )
+    );
 }
 
 export default MoviePage;

@@ -1,17 +1,19 @@
-// import React from "react";
+import React from "react";
 
-// function Search({ searchTerm, onSearchChange }) {
-//     return(
-//     <div>
-//       <input 
-//       type="text"
-//       placeholder="Movie Search..."
-//       value={searchTerm}
+function Search({ onSearch }) {
+  const handleSearchChange = (e) => {
+    onSearch(e.target.value);
+  };
 
-//     </div>
-//     );
-// }
+  return (
+    <div className="searchbar">
+      <input
+        type="text"
+        placeholder="Movie Search..."
+        onChange={handleSearchChange}
+      />
+    </div>
+  );
+}
 
-
-
-// export default Search;
+export default Search;
