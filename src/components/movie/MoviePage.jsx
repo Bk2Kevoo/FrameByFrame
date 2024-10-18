@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import MovieList from "./MovieList"
-import Search from "./Search"
+import MovieList from "./MovieList";
+import Search from "../Search";
+import { Outlet } from "react-router-dom";
 
 function MoviePage() {
     const [movies, setMovies] = useState([]);
-    const [search, setSearch] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
 
 
 
@@ -17,11 +18,14 @@ function MoviePage() {
 
     const handleSearch = (query) => setSearchQuery(query.toLowerCase());
 
+    const filteredMovies = movies.filter((movie) =>
+        movie.name.toLowerCase().includes(searchQuery)
+    );
 
     return (
         <main>
             <Search onSearch={handleSearch} />
-            <MovieList movies={movies} />
+            <MovieList movies={filteredMovies} />
         </main>
     );
 }

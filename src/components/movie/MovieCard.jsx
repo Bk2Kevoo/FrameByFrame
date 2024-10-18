@@ -13,7 +13,7 @@ function MovieCard({ movie }) {
             <p className="genre">Genre: {genre}</p>
             <div className="buttons">
                 <button className="details-button">View Details</button>
-                <button className="rent-button"> Rent </button>
+                {/* <button className="rent-button"> Rent </button> */}
             </div>
         </li>
     )

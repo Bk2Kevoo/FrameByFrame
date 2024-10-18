@@ -1,21 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.root {
+    --white: #f1f1f14d;
+    --black: #030416;
+    --grey: #d6e2e7;
+    --color: var(--white);
+    --background: var(--black);
+    --primary: var(--grey);
 }
 
-.app {
-    margin: 0 auto;
-    max-width: 1200px;
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    color: var(--color);
+    background-color: var(--background);
+}
+
+.App {
+    color: var(--color);
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+
+.App.light {
+    --color: var(--black);
+    --background: var(--white);
+    --primary: var(--black);
 }
 
 main {
     padding: 0 1rem;
 }
 
-body {
-    font-family: "Playfair Display", serif;
-    color: black;
+
+a.active,
+a:focus,
+a:hover {
+    outline: none;
+    color: var(--white);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 
@@ -26,10 +49,11 @@ header h1 {
     padding: 0.5rem 0;
 }
 
+
 .cards {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    list-style: none;
     gap: 1rem;
     padding: 2rem;
 }
@@ -47,8 +71,8 @@ header h1 {
 
 .card img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 350px;
+    /* object-fit: cover; */
 }
 
 .card button {
@@ -58,21 +82,18 @@ header h1 {
 @media (min-width: 768px) {
     .card {
         width: calc(100% / 4 - 2rem);
-        /* 4 smaller cards side by side */
     }
 }
 
 @media (min-width: 1024px) {
     .card {
         width: calc(100% / 5 - 2rem);
-        /* 5 smaller cards side by side */
     }
 }
 
 @media (min-width: 1200px) {
     .card {
         width: calc(100% / 6 - 2rem);
-        /* 6 smaller cards side by side */
     }
 }
 
@@ -123,13 +144,12 @@ input {
     padding: 0.25rem;
     border: none;
     font-family: inherit;
-    font-size: 1.2em;
-    border-bottom: 2px solid gray;
+    font-size: 1.6em;
+    border-bottom: 2px solid rgb(128, 128, 128);
     transition: all 0.2s;
     width: 100%;
 }
 
-input:focus {
-    outline: none;
+input:focus-visible {
     border-bottom: 2px solid var(--green);
 }
