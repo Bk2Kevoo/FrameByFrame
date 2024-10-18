@@ -34,6 +34,13 @@
         "rating": "5/5",
         "genre": "Family/Comedy",
         "image": "./images/HocusPocus.png"
+      },
+      {
+        "id": 6,
+        "name": "Beetlejuice",
+        "rating": "4/5",
+        "genre": "Comedy/Horror",
+        "image": "./images/Beetlejuice.png"
       }
     ]
   }
