@@ -3,6 +3,7 @@ import ErrorPage from "../pages/ErrorPage";
 import App from "../App";
 import Home from "../pages/Home";
 import MoviePage from "../movie/MoviePage";
+import MovieDetails from "../movie/MovieDetails";
 
 const projectRouter = createBrowserRouter([
     {
@@ -18,10 +19,10 @@ const projectRouter = createBrowserRouter([
                 path: "/movies",
                 element: <MoviePage />
             },
-            // {
-            //     path: "/movies",
-            //     element: <MoviePage />
-            // }
+            {
+                path: "/movies/:movieId",
+                element: <MovieDetails />
+            }
         ]
     }
 ])
