@@ -29,7 +29,6 @@ function MoviePage() {
     });
 
 
-    //   console.log(filteredMovies);
 
     return (
         <main>

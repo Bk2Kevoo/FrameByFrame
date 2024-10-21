@@ -8,7 +8,7 @@ function App() {
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [movies, setMovies] = useState([]);
 
-    const toggleDarkMode = () => setIsDarkMode(current => !current);
+    const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
     const handleViewMovies = (updatedMovie) => {
         const updatedArray = movies.map(movie => 
@@ -19,7 +19,7 @@ function App() {
 
     return (
         <div className={isDarkMode ? "App" : "App light"}>
-            <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
             <Outlet context={{handleViewMovies}}/>
         </div>
     );
