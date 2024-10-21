@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Header from "./navigation/Header";
-// import MoviePage from "./movie/MoviePage";
+import MoviePage from "./movie/MoviePage";
 import { Outlet } from "react-router-dom";
 
 function App() {
 
     const [isDarkMode, setIsDarkMode] = useState(true);
-    const [movies, setMovies] = useState([]);
+    // const [movies, setMovies] = useState([]);
 
     const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
@@ -19,10 +19,12 @@ function App() {
 
     return (
         <div className={isDarkMode ? "App" : "App light"}>
-            <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}/>
+            <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            <MoviePage />
             <Outlet context={{handleViewMovies}}/>
         </div>
     );
 }
 
 export default App;
+

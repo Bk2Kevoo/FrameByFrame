@@ -3,65 +3,65 @@
     {
       "id": 1,
       "name": "Dragon Ball Super: Super Hero",
+      "image": "/images/dragonball.jpg",
       "rating": "4",
       "genre": "Anime",
-      "image": "./images/dragonball.jpg",
       "description": "Earth's heroes face a new threat as the remnants of the Red Ribbon Army unleash powerful androids, pushing Piccolo and Gohan to their limits in an epic battle for justice!"
     },
     {
       "id": 2,
       "name": "A Haunted House 2",
+      "image": "/public/images/A_Haunted_House_2.jpg",
       "rating": "4",
       "genre": "Horror/Comedy",
-      "image": "./images/A_Haunted_House_2.jpg",
       "description": "In their dream home, Malcolm faces paranormal chaos again. Can he and his new family overcome the bizarre hauntings that threaten their fresh start?"
     },
     {
       "id": 3,
       "name": "How The Grinch Stole Christmas",
+      "image": "/images/TheGrinch.jpg",
       "rating": "4",
       "genre": "Family/Comedy",
-      "image": "./images/TheGrinch.jpg",
       "description": "The Grinch, a grouchy green creature, plots to ruin Christmas for the joyful Whoville, but his heart might just change in the process!"
     },
     {
       "id": 4,
       "name": "Terrifier 3",
+      "image": "/images/Terrifier3.png",
       "rating": "3",
       "genre": "Horror",
-      "image": "./images/Terrifier3.png",
       "description": "The chilling saga of Art the Clown continues as he returns to wreak havoc on unsuspecting victims in this terrifying horror sequel."
     },
     {
       "id": 5,
       "name": "Hocus Pocus",
+      "image": "/images/HocusPocus.png",
       "rating": "5",
       "genre": "Family/Comedy",
-      "image": "./images/HocusPocus.png",
-      "description": "Three resurrected witches run amok in modern-day Salem, and it up to a group of kids to stop their wicked plans before Halloween night ends!"
+      "description": "Three resurrected witches run amok in modern-day Salem, and it is up to a group of kids to stop their wicked plans before Halloween night ends!"
     },
     {
       "id": 6,
       "name": "Beetlejuice",
+      "image": "/images/Beetlejuice.png",
       "rating": "4",
       "genre": "Comedy/Horror",
-      "image": "./images/Beetlejuice.png",
       "description": "When a recently deceased couple haunts their former home, they enlist the help of the mischievous ghost Beetlejuice to scare away the new living inhabitants."
     },
     {
       "id": 7,
       "name": "War for the Planet of the Apes",
+      "image": "/images/War.jpg",
       "rating": "4",
       "genre": "Action/Sci-fi",
-      "image": "./images/War.jpg",
       "description": "Caesar leads his ape tribe in a fierce battle against humans, exploring themes of loyalty, sacrifice, and the struggle for freedom in this gripping sci-fi epic."
     },
     {
       "id": 8,
       "name": "The Dark Knight",
+      "image": "/images/TheDarkKnight.jpg",
       "rating": "5",
       "genre": "Action/Crime",
-      "image": "./images/TheDarkKnight.jpg",
       "description": "Batman faces off against the Joker, a chaotic mastermind bent on plunging Gotham City into anarchy, testing the hero's moral limits like never before."
     }
   ]
