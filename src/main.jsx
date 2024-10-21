@@ -9,7 +9,3 @@ const root = createRoot(rootElemnt);
 root.render(
   <RouterProvider router={projectRouter}/>
 )
-
-export default main;
-
-
