@@ -23,6 +23,10 @@ const CheckOut = () => {
   const navigate = useNavigate();
   const { movieId } = useParams();
 
+  const handleCheckoutFeature = () => {
+    alert("Thank you for the purchase, this movie expires in 3 days");
+  };
+
   useEffect(() => {
     fetch(`${baseUrl}/${movieId}`)
       .then((response) => response.json())
@@ -46,24 +50,16 @@ const CheckOut = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(namedMovie), 
+          body: JSON.stringify(namedMovie),
         })
           .then((response) => response.json())
           .then((namedMovie) => {
-            handleCheckOut(namedMovie);
+            handleCheckoutFeature(namedMovie);
             navigate(`/movies/${movieId}/checkout`);
           })
           .catch((err) => alert(err));
       })
       .catch((err) => alert(err.message));
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
   };
 
   return (
@@ -77,38 +73,20 @@ const CheckOut = () => {
           <h3>Movie Information</h3>
         </div>
 
-        <label htmlFor="name"> Movie Name</label>
+        <label htmlFor="name"> Movie Name: </label>
+        <input type="text" id="name" name="name" value={formData.name} />
+
+        <label htmlFor="movie-rating">Movie Rating: </label>
         <input
+          className="small-input"
+          id="movie-rating"
           type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
+          value={`${formData.rating} ★`}
+          readOnly
         />
 
-        <label htmlFor="rating">Movie Rating</label>
-        <select
-          id="rating"
-          name="rating"
-          value={formData.rating}
-          onChange={handleChange}
-        >
-          <option>Select One</option>
-          <option value="1">1⭐ </option>
-          <option value="2">2⭐</option>
-          <option value="3">3⭐</option>
-          <option value="4">4⭐</option>
-          <option value="5">5⭐</option>
-        </select>
-
-        <label htmlFor="genre">Movie Genre</label>
-        <input
-          type="text"
-          id="genre"
-          name="genre"
-          value={formData.genre}
-          onChange={handleChange}
-        />
+        <label htmlFor="genre">Movie Genre: </label>
+        <input type="text" id="genre" name="genre" value={formData.genre} />
       </form>
 
       <section>
@@ -122,15 +100,16 @@ const CheckOut = () => {
               <h3>Basic Information</h3>
             </div>
 
-            <label htmlFor="name"> First Name</label>
-            <input type="text" id="name" name="name" />
+            <label htmlFor="first-name"> First Name</label>
+            <input type="text" id="first-name" name="first-name" required />
 
-            <label htmlFor="genre">Last Name</label>
-            <input type="text" id="genre" name="genre" />
-            <label htmlFor="genre">Card Number</label>
-            <input type="text" id="genre" name="genre" />
+            <label htmlFor="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" />
 
-            <button>CheckOut</button>
+            <label htmlFor="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" />
+
+            <button onClick={handleCheckoutFeature}>CheckOut</button>
           </form>
         </div>
       </section>

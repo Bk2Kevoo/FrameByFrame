@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList";
-import Search from "../Search"
-import Dropdowns from "../Dropdowns";
+import Search from "../functionality/Search"
+import Dropdowns from "../functionality/Dropdowns";
 
 function MoviePage() {
     const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
@@ -18,6 +18,8 @@ function MoviePage() {
     }, []); // Empty dependency array ensures this effect runs only once on mount.
  //dependency is the reactive value, when changed refires effect function
  //empty dependency only fires once 
+
+ 
 
     const handleSearch = (query) => setSearchQuery(query.toLowerCase()); // Function to handle search input, updates searchQuery state to lowercase.
 
