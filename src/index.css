@@ -284,3 +284,47 @@ select:focus {
   outline: none; 
 }
 
+.checkout-container {
+  display: flex; 
+  gap: 10px; 
+}
+
+
+.Checkout-form,
+.basic-form {
+  flex: 0 1 20%; 
+  margin: 230px;
+  margin-top: 80px;
+  padding: 30px; 
+  border: 1px solid #ccc; 
+}
+
+
+.Checkout-form label,
+.basic-form label {
+  display: block; 
+  margin-bottom: 9px; 
+}
+
+
+.Checkout-form input,
+.basic-form input {
+  width: 100%; 
+  padding: 8px; 
+  margin-bottom: 16px; 
+  box-sizing: border-box; 
+}
+
+
+.basic-form button {
+  background-color: #007bff; 
+  height: 30px;
+  color: white;
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.basic-form button:hover {
+  background-color: #0056b3; 
+}

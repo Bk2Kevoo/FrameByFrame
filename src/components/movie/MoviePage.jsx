@@ -41,12 +41,9 @@ function MoviePage() {
                 handleRatingChange={setSelectedRating} // Passing function to update selected rating.
             />
             <MovieList movies={filteredMovies} /> 
-            {/* // Rendering MovieList with the filtered list of movies. */}
 
             {filteredMovies.map((movie) => ( 
                 <div key={movie.id}>
-                    {/* <h3>{movie.name}</h3> */}
-                {/* <VideoLikes upvotes={movie.upvotes} downvotes={movie.downvotes} /> */}
                 </div>
             ))}
         </main>
