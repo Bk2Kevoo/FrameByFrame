@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList";
 import Search from "../Search"
 import Dropdowns from "../Dropdowns";
+import VideoLikes from "../VideoLikes";
 
 function MoviePage() {
     const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
@@ -9,12 +10,15 @@ function MoviePage() {
     const [selectedGenre, setSelectedGenre] = useState("All"); // State for the selected genre filter, default is "All".
     const [selectedRating, setSelectedRating] = useState("All"); // State for the selected rating filter, initialized as an empty string.
 
+
     useEffect(() => { // useEffect to fetch movies when the component mounts.
         fetch("http://localhost:6001/movies") 
             .then((response) => response.json()) 
             .then((data) => setMovies(data)) // Updating the movies state with the fetched data.
             .catch((error) => console.log("Error", error)); // Logging any errors during the fetch.
     }, []); // Empty dependency array ensures this effect runs only once on mount.
+ //dependency is the reactive value, when changed refires effect function
+ //empty dependency only fires once 
 
     const handleSearch = (query) => setSearchQuery(query.toLowerCase()); // Function to handle search input, updates searchQuery state to lowercase.
 
@@ -38,6 +42,12 @@ function MoviePage() {
             <MovieList movies={filteredMovies} /> 
             {/* // Rendering MovieList with the filtered list of movies. */}
 
+            {filteredMovies.map((movie) => ( 
+                <div key={movie.id}>
+                    <h3>{movie.name}</h3>
+                <VideoLikes upvotes={movie.upvotes} downvotes={movie.downvotes} />
+                </div>
+            ))}
         </main>
     );
 }

@@ -10,6 +10,7 @@ const projectRouter = createBrowserRouter([ // Creating a router with routes for
         path: "/", // Base path for the application.
         element: <App />, // Main App component that wraps around child routes.
         errorElement: <ErrorPage />, // Component to render in case of routing errors.
+        //property used to construct route inside another route 
         children: [
             {
                 index: true, // Indicates this is the default child route.
