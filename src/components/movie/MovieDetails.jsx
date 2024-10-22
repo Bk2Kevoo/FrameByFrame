@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"; //importing hooks
 import { useParams } from "react-router-dom"; //importing routing hook
 import { useNavigate } from "react-router-dom";
+import VideoLikes from "../VideoLikes";
 
 const baseUrl = "http://localhost:6001/movies"; //URL for movie API
 
@@ -21,7 +22,7 @@ const MovieDetails = () => {
     return <h2>Loading...</h2>; // Display loading message.
   }
 
-  const { id, image, name, rating, genre, description } = movie; // Destructuring movie details.
+  const { id, image, name, rating, genre, upvotes, downvotes, description } = movie; // Destructuring movie details.
 
   return (
     <div className="detail-card" data-testid="movie-item">
@@ -30,7 +31,10 @@ const MovieDetails = () => {
         <h3>{name}</h3>
         <p className="rating">Rating: {rating}</p>
         <p className="genre">Genre: {genre}</p>
-        <p>{description}</p>
+
+        <VideoLikes movieId={id} upvotes={upvotes || 0} downvotes= {downvotes || 0} />
+
+        <p> {description}</p>
         <div className="rent-button">
           <button onClick={() => navigate(`/movies/${id}/checkout`)}>
             Rent
