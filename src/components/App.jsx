@@ -15,7 +15,9 @@ function App() {
             movie.id === updatedMovie.id ? updatedMovie : movie // If the movie id matches the updatedMovie's id, replace it; otherwise, keep the original.
         );
         setMovies(updatedArray); // Updating the movies state with the new array of movies.
-    };
+        };
+
+
 
     return (
         <div className={isDarkMode ? "App" : "App light"}> 
@@ -26,6 +28,7 @@ function App() {
             {/* // Rendering the MoviePage component, which displays the main content of the application. */}
             <Outlet context={{handleViewMovies}}/> 
             {/* // Outlet component for rendering child routes, passing down the handleViewMovies function in the context for nested components to access. */}
+        
         </div>
     );
 }
