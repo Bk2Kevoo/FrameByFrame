@@ -4,6 +4,7 @@ import App from "../App";
 import Home from "../pages/Home";
 import MoviePage from "../movie/MoviePage";
 import MovieDetails from "../movie/MovieDetails";
+import CheckOut from "../pages/CheckOut";
 
 const projectRouter = createBrowserRouter([ // Creating a router with routes for the application.
     {
@@ -22,6 +23,10 @@ const projectRouter = createBrowserRouter([ // Creating a router with routes for
             {
                 path: "/movies/:movieId", // Dynamic route for displaying movie details based on ID.
                 element: <MovieDetails /> // Component that shows details for a specific movie.
+            },
+            {
+                path: "/movies/:movieId/checkout", 
+                element: <CheckOut /> 
             }
         ]
     }
@@ -29,4 +34,3 @@ const projectRouter = createBrowserRouter([ // Creating a router with routes for
 
 
 export default projectRouter;
-// export default index;
