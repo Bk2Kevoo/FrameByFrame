@@ -7,14 +7,16 @@ const Header = ({ isDarkMode, toggleDarkMode }) => { // Functional component rec
                 <span className="logo" role="img"></span> 
                 Frame By Frame 🎥
             </h1>
-            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink> 
-            {/* // NavLink to Home with active class for styling. */}
+            <nav>
+            <NavLink 
+            to="/" 
+            className={({ isActive }) => isActive ? "active home-link" : "home-link"}>Home</NavLink> 
 
-            <NavLink end to="/movies" className={({ isActive }) => isActive ? "active" : ""}>All Movies</NavLink> 
-            {/* // NavLink to Movies page with active class. */}
+            <NavLink 
+            end to="/movies" 
+            className={({ isActive }) => isActive ? "active movies-link" : "movies-link"}>All Movies</NavLink> 
 
-            <button onClick={toggleDarkMode}>{isDarkMode ? "Light Mode" : "Dark Mode"}</button>
-             {/* // Button to toggle dark/light mode. */}
+            </nav>
 
         </header>
     );
