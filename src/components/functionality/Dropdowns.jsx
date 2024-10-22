@@ -20,6 +20,8 @@ function Dropdowns({
           <option value="Horror/Comedy">Horror/Comedy</option>
           <option value="Family/Comedy">Family/Comedy</option>
           <option value="Horror">Horror</option>
+          <option value="Action/Sci-fi">Action/Sci-Fi</option>
+          <option value="Action/Crime">Action/Crime</option>
         </select>
       </div>
 
@@ -31,11 +33,11 @@ function Dropdowns({
           onChange={(e) => handleRatingChange(e.target.value)}
         >
           <option value="All">All</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+          <option value="1">1 ★</option>
+          <option value="2">2 ★</option>
+          <option value="3">3 ★</option>
+          <option value="4">4 ★</option>
+          <option value="5">5 ★</option>
         </select>
       </div>
     </div>

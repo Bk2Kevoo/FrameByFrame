@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import VideoLikes from "../VideoLikes";
+import VideoLikes from "../functionality/VideoLikes";
 
 function MovieCard({ movie }) {
   // Functional component that receives a 'movie' object as a prop.
@@ -15,7 +15,11 @@ function MovieCard({ movie }) {
       <p className="genre">Genre: {genre}</p>
 
       {/* video likes component */}
-      <VideoLikes movieId={id} upvotes={upvotes || 0} downvotes= {downvotes || 0} />
+      <VideoLikes
+        movieId={id}
+        upvotes={upvotes || 0}
+        downvotes={downvotes || 0}
+      />
 
       <div className="details">
         <Link to={`/movies/${id}`}>
