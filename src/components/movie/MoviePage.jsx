@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList";
 import Search from "../Search"
 import Dropdowns from "../Dropdowns";
-import VideoLikes from "../VideoLikes";
 
 function MoviePage() {
     const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
@@ -44,8 +43,8 @@ function MoviePage() {
 
             {filteredMovies.map((movie) => ( 
                 <div key={movie.id}>
-                    <h3>{movie.name}</h3>
-                <VideoLikes upvotes={movie.upvotes} downvotes={movie.downvotes} />
+                    {/* <h3>{movie.name}</h3> */}
+                {/* <VideoLikes upvotes={movie.upvotes} downvotes={movie.downvotes} /> */}
                 </div>
             ))}
         </main>
