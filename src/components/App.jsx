@@ -28,7 +28,7 @@ function App() {
             {/* // Rendering the MoviePage component, which displays the main content of the application. */}
             <Outlet context={{handleViewMovies}}/> 
             {/* // Outlet component for rendering child routes, passing down the handleViewMovies function in the context for nested components to access. */}
-        
+                    
         </div>
     );
 }

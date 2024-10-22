@@ -7,6 +7,9 @@ const Home = () => {
             <h2>
                 <p></p>
             </h2>
+
+        <div className="bg"></div>  
+
         </div>
     )
 }
