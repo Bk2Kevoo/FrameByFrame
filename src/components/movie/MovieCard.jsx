@@ -7,17 +7,15 @@ function MovieCard({ movie }) {
 
   return (
     <li className="card" data-testid="movie-item">
-      {/* // JSX to create a list item for the movie card. className is setting the style, data-testid is custom attribute for testing if rendering correctly*/}
+      {/* // JSX to create a list item for the movie card. className is setting the style, data-testid is custom attribute for testing if rendering correctly */}
       <img src={image} alt={name} className="movie-image" />
       <h3>{name}</h3>
       <p>Rating: {rating}</p>
       <p className="genre">Genre: {genre}</p>
       <div className="details">
-        {/* // Container for additional details. */}
         <Link to={`/movies/${id}`}>
           <button>View Details</button>
         </Link>
-        {/* // Link to the movie details page using dynamic routing based on the movie's ID. */}
       </div>
     </li>
   );

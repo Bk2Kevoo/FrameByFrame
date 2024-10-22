@@ -208,3 +208,28 @@ input:focus-visible {
     background-color: #0056b3;
 }
 
+.Home {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 80vh; /* Take full viewport height */
+    
+  }
+  
+  .content-box { 
+    padding: 20px; 
+    max-width: 800px;
+  }
+  
+  .centered {
+    text-align: center; 
+  }
+  
+  .italic {
+    font-style: italic; 
+  }
+  
+  .large-text {
+    font-size: 1.5em; 
+  }
+  

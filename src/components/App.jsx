@@ -22,7 +22,6 @@ function App() {
         {/* // Applying a CSS class based on the dark mode state. If true, use "App"; otherwise, "App light". */}
             <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
              {/* // Rendering the Header component and passing down the dark mode state and toggle function as props. */}
-            {/* <MoviePage />  */}
             {/* // Rendering the MoviePage component, which displays the main content of the application. */}
             <Outlet context={{handleViewMovies}}/> 
             {/* // Outlet component for rendering child routes, passing down the handleViewMovies function in the context for nested components to access. */}
