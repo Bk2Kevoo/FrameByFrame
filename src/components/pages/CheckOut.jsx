@@ -20,6 +20,12 @@ const CheckOut = () => {
     genre: "",
   });
 
+  const [basicInfo, setBasicInfo] = useState({
+    firstName: "",
+    lastName: "",
+    cardNumber: "",
+  });
+
   const navigate = useNavigate();
   const { movieId } = useParams();
 
@@ -55,6 +61,7 @@ const CheckOut = () => {
           .then((response) => response.json())
           .then((namedMovie) => {
             handleCheckoutFeature(namedMovie);
+            resetBasicInfo();
             navigate(`/movies/${movieId}/checkout`);
           })
           .catch((err) => alert(err));
@@ -62,8 +69,16 @@ const CheckOut = () => {
       .catch((err) => alert(err.message));
   };
 
+  const resetBasicInfo = () => {
+    setBasicInfo({
+      firstName: "",
+      lastName: "",
+      cardNumber: "",
+    });
+  };
+
   return (
-    <section>
+    <section className="checkout-container">
       <form
         className="Checkout-form"
         autoComplete="off"
@@ -74,7 +89,14 @@ const CheckOut = () => {
         </div>
 
         <label htmlFor="name"> Movie Name: </label>
-        <input type="text" id="name" name="name" value={formData.name} />
+        <input
+          className="movie-name"
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          readOnly={true}
+        />
 
         <label htmlFor="movie-rating">Movie Rating: </label>
         <input
@@ -82,11 +104,18 @@ const CheckOut = () => {
           id="movie-rating"
           type="text"
           value={`${formData.rating} ★`}
-          readOnly
+          readOnly={true}
         />
 
         <label htmlFor="genre">Movie Genre: </label>
-        <input type="text" id="genre" name="genre" value={formData.genre} />
+        <input
+          className="genre-input"
+          type="text"
+          id="genre"
+          name="genre"
+          value={formData.genre}
+          readOnly={true}
+        />
       </form>
 
       <section>
@@ -101,13 +130,40 @@ const CheckOut = () => {
             </div>
 
             <label htmlFor="first-name"> First Name</label>
-            <input type="text" id="first-name" name="first-name" required />
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="Enter First Name"
+              value={basicInfo.firstName}
+              onChange={(e) =>
+                setBasicInfo({ ...basicInfo, firstName: e.target.value })
+              }
+              required
+            />
 
             <label htmlFor="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" />
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Enter Last Name"
+              value={basicInfo.lastName}
+              onChange={(e) =>
+                setBasicInfo({ ...basicInfo, lastName: e.target.value })
+              }
+            />
 
             <label htmlFor="card-number">Card Number</label>
-            <input type="text" id="card-number" name="card-number" />
+            <input
+              type="text"
+              id="card-number"
+              name="card-number"
+              value={basicInfo.cardNumber}
+              onChange={(e) =>
+                setBasicInfo({ ...basicInfo, cardNumber: e.target.value })
+              }
+            />
 
             <button onClick={handleCheckoutFeature}>CheckOut</button>
           </form>
