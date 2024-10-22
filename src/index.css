@@ -10,10 +10,12 @@
 body {
   font-family: "Playfair Display", serif;
   font-size: 16px;
-  background-color:rgba(247, 247, 247, 0.267)
+  color: var(--color);
+  background-color: var(--background);
 }
 
 .App {
+  color: var(--color);
   background-color: var(--background);
   min-height: 100vh;
 }
@@ -116,6 +118,7 @@ header h1 {
 
 .searchbar {
   border: 1px solid;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -189,11 +192,13 @@ input {
   justify-content: center;
   align-items: center;
   min-height: 80vh; /* Take full viewport height */
+  padding-top: 40px;
 }
 
 .content-box {
   padding: 20px;
-  max-width: 800px;
+  max-width: 900px;
+  margin-top: -300px;
 }
 
 .centered {
@@ -232,7 +237,7 @@ nav {
 .movies-link {
   text-decoration: none;
   color: inherit;
-  margin: 0 15px;
+  margin: 0 60px;
   padding: 5px 10px;
   font-size: 20px;
   transition: background-color 0.3s, color 0.3s;
@@ -278,10 +283,4 @@ select:focus {
   border-color: #000000a2; 
   outline: none; 
 }
-.small-input {
-    width: 80px;
-    height: 25px;
-    padding: 5px; /* Adjust padding for smaller look */
-    font-size: 20px; /* Adjust font size */
-  }
-  
+
