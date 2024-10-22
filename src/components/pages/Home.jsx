@@ -1,6 +1,7 @@
 import React from "react";
 
 const Home = () => {
+
   return (
     <div className="Home">
       <div className="content-box">
@@ -33,7 +34,9 @@ const Home = () => {
           excitement and joy!
         </p>
       </div>
+    <div className="bg"></div>  
     </div>
+
   );
 };
 
