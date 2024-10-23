@@ -44,7 +44,7 @@ const MovieDetails = () => {
 
         <p> {description}</p>
         <p className="due-date">Price: ${price}</p>
-        <p>Experation Date: 3 days</p>
+        <p>Expiration Date: 3 days</p>
 
         <div className="rent-button">
           <button onClick={() => navigate(`/movies/${id}/checkout`)}>
