@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList";
 import Search from "../functionality/Search"
 import Dropdowns from "../functionality/Dropdowns";
+import AddMovieForm from "../AddMovieForm";
 
 function MoviePage() {
     const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
@@ -30,6 +31,29 @@ function MoviePage() {
         return matchesSearch && matchesGenre && matchesRating; // Returns true if all conditions are met.
     });
 
+    
+    //two pieces of info is needed
+    const handleSubmit = (event, newMovie, ref) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+        // Send a POST request to your API to add the new movie
+        // debugger 
+        const image = URL.createObjectURL(ref.current.files[0])
+        fetch("http://localhost:6001/movies", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({...newMovie, image:image, price:parseInt(newMovie.price), rating:parseInt(newMovie.rating)  }), // Send the new movie data
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            setMovies((prevMovies) => [...prevMovies, data]); // Update the movies state with the new movie
+            setNewMovie({ name: "", image: "", rating: "", genre: "" }); // Reset the form fields
+        })
+        .catch((error) => console.log("Error", error));
+    };
+    
+
     return (
         <main>
             <Search onSearch={handleSearch} /> 
@@ -40,12 +64,12 @@ function MoviePage() {
                 selectedRating={selectedRating} // Passing selected rating to Dropdowns.
                 handleRatingChange={setSelectedRating} // Passing function to update selected rating.
             />
+
+             <AddMovieForm handleSubmit={handleSubmit} />
+
             <MovieList movies={filteredMovies} /> 
 
-            {filteredMovies.map((movie) => ( 
-                <div key={movie.id}>
-                </div>
-            ))}
+            {/* <AddMovieForm handleSubmit={handleSubmit} /> */}
         </main>
     );
 }
