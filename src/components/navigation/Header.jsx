@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 
-const Header = ({ isDarkMode, toggleDarkMode }) => { // Functional component receiving dark mode state and toggle function as props.
+const Header = () => { // Functional component receiving dark mode state and toggle function as props.
     return (
         <header>
             <h1>
                 <span className="logo" role="img"></span> 
                 Frame By Frame 🎥
             </h1>
+
+            
             <nav>
             <NavLink 
             to="/" 
