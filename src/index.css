@@ -233,7 +233,8 @@ nav {
 }
 
 .home-link,
-.movies-link {
+.movies-link,
+.add-movie-link {
   text-decoration: none;
   color: inherit;
   margin: 0 60px;
@@ -243,9 +244,12 @@ nav {
 }
 
 .home-link:hover,
-.movies-link:hover {
+.movies-link:hover,
+.add-movie-link {
   background-color: rgb(202, 3, 3);
 }
+
+.add-
 
 .active {
   font-weight: bold;
@@ -326,4 +330,44 @@ select:focus {
 
 .basic-form button:hover {
   background-color: #0056b3; 
+}
+
+.add-movie-form {
+  display: flex;
+  flex-direction: column; /* Stack the form elements vertically */
+  gap: 1rem; /* Adds space between the form elements */
+  width: 100%;
+  max-width: 500px; /* Optional: Limit the width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
+.add-movie-form input,
+.add-movie-form button {
+  width: 100%; /* Make the inputs and button full width */
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.add-movie-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-movie-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+.add-movie-form button:hover {
+  background-color: #0056b3;
 }

@@ -23,7 +23,8 @@ function AddMovieForm({ }){
 
     return(
         <div>
-        <form onSubmit={(e) => handleSubmit(e, newMovie, ref)}>
+        <form className="add-movie-form"
+        onSubmit={(e) => handleSubmit(e, newMovie, ref)}>
             <h2>Add New Movie</h2>
 
         <input type="text" 
