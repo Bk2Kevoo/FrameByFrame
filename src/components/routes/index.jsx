@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import MoviePage from "../movie/MoviePage";
 import MovieDetails from "../movie/MovieDetails";
 import CheckOut from "../pages/CheckOut";
-import AddMovieForm from "../AddMovieForm";
+import AddMovieForm from "../pages/AddMovieForm";
 
 const projectRouter = createBrowserRouter([ // Creating a router with routes for the application.
     {
