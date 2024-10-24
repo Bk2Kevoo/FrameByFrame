@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
-import { useOutletContext, useParams } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 const baseUrl = "http://localhost:6001/movies";
 
@@ -19,7 +19,6 @@ function AddMovieForm({ }){
         const { name, value } = event.target;
         setNewMovie((prevMovie) => ({ ...prevMovie, [name]: value }));
     };
-    // setNewMovie({ name: "", image: "", rating: "", genre: "" }); // Reset the form fields
 
     return(
         <div>
