@@ -42,12 +42,6 @@ const MovieDetails = () => {
         <p className="rating">Rating: {rating}</p>
         <p className="genre">Genre: {genre}</p>
 
-        <VideoLikes
-          movieId={id}
-          upvotes={upvotes || 0}
-          downvotes={downvotes || 0}
-        />
-
         <p> {description}</p>
         <p className="due-date">Price: ${price}</p>
         <p>Expiration Date: 3 days</p>
@@ -57,6 +51,12 @@ const MovieDetails = () => {
             Rent
           </button>
         </div>
+
+        <VideoLikes
+          movieId={id}
+          upvotes={upvotes || 0}
+          downvotes={downvotes || 0}
+        />
       </>
     </div>
   );
