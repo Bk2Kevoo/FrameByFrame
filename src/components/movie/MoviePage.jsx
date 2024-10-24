@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieList from "./MovieList";
 import Search from "../functionality/Search";
 import Dropdowns from "../functionality/Dropdowns";
-import AddMovieForm from "../AddMovieForm";
+import AddMovieForm from "../pages/AddMovieForm";
 import { useOutletContext } from "react-router-dom";
 
 function MoviePage() {
