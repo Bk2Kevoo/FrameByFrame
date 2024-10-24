@@ -11,7 +11,7 @@ function AddMovieForm({ }){
     const {handleSubmit} = useOutletContext();
 
     const ref = useRef(null);
-    //use when something isn't needed for rendering, alternative to state 
+    //use when something isn't needed for rendering, alternative to state *uncontrolled, managed by dom* 
 
     const [newMovie, setNewMovie] = useState({ name: "", rating: "", genre: "", price:"" }); // State for new movie input.
 
