@@ -13,6 +13,18 @@ body {
 background-color: rgba(247, 223, 201, 0.733);
 }
 
+/* .App {
+  color: var(--color);
+  background-color: var(--background);
+  min-height: 100vh;
+} */
+/* 
+.App.light {
+  --color: var(--black);
+  --background: var(--white);
+  --primary: var(--black);
+} */
+
 main {
   padding: 0 1rem;
 }
@@ -23,7 +35,7 @@ header h1 {
   font-weight: 900;
   text-align: center;
   padding: 0.5rem 0;
-};
+}
 
 .cards {
   display: flex;
@@ -245,7 +257,6 @@ nav {
   text-decoration: none;
   color: inherit;
 }
-
 
 .active {
   font-weight: bold;

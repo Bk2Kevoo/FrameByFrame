@@ -6,7 +6,7 @@ import VideoLikes from "../functionality/VideoLikes";
 const baseUrl = "http://localhost:6001/movies"; //URL for movie API
 
 const MovieDetails = () => {
-  const [movie, setMovie] = useState(null); // State to hold the movie details.
+  const [movie, setMovie] = useState(null); // State to hold the movie details.*controlled, state updates on every input
   const { movieId } = useParams(); // Retrieves URL parameters from the current route.
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const MovieDetails = () => {
       .then((response) => response.json()) // Converting response to JSON.
       .then((data) => setMovie(data)) // Updating state with fetched movie data.
       .catch((error) => alert(error)); // Handling fetch errors with an alert.
-  }, [movieId]); // Dependency array to refetch when movieId changes.
+  }, [movieId]); // Dependency array to refetch when movieId changes., if empty runs once, with value runs when value changes
 
   if (!movie) {
     // Conditional rendering while movie data is being fetched. ! is logical not operator, if any is false condition will evaluate to true

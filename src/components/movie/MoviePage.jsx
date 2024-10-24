@@ -5,11 +5,12 @@ import Dropdowns from "../functionality/Dropdowns";
 import { useOutletContext } from "react-router-dom";
 
 function MoviePage() {
-    // const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
     const [searchQuery, setSearchQuery] = useState(""); 
     const [selectedGenre, setSelectedGenre] = useState("All"); // State for the selected genre filter, default is "All".
     const [selectedRating, setSelectedRating] = useState("All"); // State for the selected rating filter, initialized as an empty string.
     const { movies } = useOutletContext()
+   
+    
 
     const handleSearch = (query) => setSearchQuery(query.toLowerCase()); // Function to handle search input, updates searchQuery state to lowercase.
 
@@ -19,11 +20,15 @@ function MoviePage() {
         const matchesRating = selectedRating === "All" || movie.rating === parseInt(selectedRating); // Checks if rating matches the selected rating.
         return matchesSearch && matchesGenre && matchesRating; // Returns true if all conditions are met.
     });
+
    
+    
+
     return (
         <main>
             <Search onSearch={handleSearch} /> 
             {/* // Rendering Search component and passing the search handler. */}
+
             <Dropdowns
                 selectedGenre={selectedGenre} // Passing selected genre to Dropdowns.
                 handleGenreChange={setSelectedGenre} // Passing function to update selected genre.
@@ -34,7 +39,8 @@ function MoviePage() {
             <MovieList movies={filteredMovies} /> 
 
         </main>
-    );
+
+  );
 }
 
 export default MoviePage;
