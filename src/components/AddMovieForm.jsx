@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRef } from "react";
+import { useOutletContext, useParams } from "react-router-dom";
 
-function AddMovieForm({ handleSubmit }){
+const baseUrl = "http://localhost:6001/movies";
+
+function AddMovieForm({ }){
     // defines new function,{} is desctructuring it unpacks values from arrays or props from objects, this means youre directly extracting values from the props that is passed to the component 
     //what is in ({}) is the props, they manage the forms state and behavior
+
+    const {handleSubmit} = useOutletContext();
 
     const ref = useRef(null);
     //use when something isn't needed for rendering, alternative to state 
@@ -14,7 +19,7 @@ function AddMovieForm({ handleSubmit }){
         const { name, value } = event.target;
         setNewMovie((prevMovie) => ({ ...prevMovie, [name]: value }));
     };
-
+    // setNewMovie({ name: "", image: "", rating: "", genre: "" }); // Reset the form fields
 
     return(
         <div>

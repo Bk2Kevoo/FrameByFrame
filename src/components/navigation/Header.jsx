@@ -16,6 +16,13 @@ const Header = ({ isDarkMode, toggleDarkMode }) => { // Functional component rec
             end to="/movies" 
             className={({ isActive }) => isActive ? "active movies-link" : "movies-link"}>All Movies</NavLink> 
 
+            {/* Nav Link for add new movie */}
+            <NavLink
+                end to="/movies/new"
+                className={({ isActive }) => isActive ? "active add-link" : "add-link"}>
+                    Add New Movie
+                </NavLink>
+
             </nav>
 
         </header>
