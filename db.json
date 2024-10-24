@@ -71,6 +71,22 @@
       "genre": "Action/Crime",
       "description": "Batman faces off against the Joker, a chaotic mastermind bent on plunging Gotham City into anarchy, testing the hero's moral limits like never before.",
       "price": 5.99
+    },
+    {
+      "id": "3cae",
+      "name": "Smile 2",
+      "rating": 4,
+      "genre": "Horror",
+      "price": 3,
+      "image": "blob:http://127.0.0.1:5173/4f7b2a6a-2ea5-4355-b287-18815a6bd34f"
+    },
+    {
+      "id": "27b5",
+      "name": "Smile 2",
+      "rating": 4,
+      "genre": "Horror",
+      "price": 3,
+      "image": "blob:http://127.0.0.1:5173/acc45cae-33cf-4a4b-8be0-159047296feb"
     }
   ]
 }

@@ -234,22 +234,29 @@ nav {
 
 .home-link,
 .movies-link,
-.add-movie-link {
+.add-link {
   text-decoration: none;
+  font-weight: bold;
   color: inherit;
-  margin: 0 60px;
+  margin: 0 20px;
   padding: 5px 10px;
   font-size: 20px;
   transition: background-color 0.3s, color 0.3s;
 }
 
+
+
 .home-link:hover,
 .movies-link:hover,
-.add-movie-link {
+.add-link:hover {
   background-color: rgb(202, 3, 3);
 }
 
-.add-
+.add-link{
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+}
 
 .active {
   font-weight: bold;
