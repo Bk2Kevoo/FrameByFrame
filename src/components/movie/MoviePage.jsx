@@ -21,7 +21,6 @@ function MoviePage() {
  //dependency is the reactive value, when changed refires effect function
  //empty dependency only fires once 
 
- 
 
     const handleSearch = (query) => setSearchQuery(query.toLowerCase()); // Function to handle search input, updates searchQuery state to lowercase.
 
@@ -32,7 +31,6 @@ function MoviePage() {
         return matchesSearch && matchesGenre && matchesRating; // Returns true if all conditions are met.
     });
 
-    
     //two pieces of info is needed
     // const handleSubmit = (event, newMovie, ref) => {
     //     event.preventDefault(); // Prevent the default form submission behavior
@@ -71,10 +69,10 @@ function MoviePage() {
             {/* <AddMovieForm handleSubmit={handleSubmit} /> */}
         </main>
     );
-  const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedGenre, setSelectedGenre] = useState("All"); // State for the selected genre filter, default is "All".
-  const [selectedRating, setSelectedRating] = useState("All"); // State for the selected rating filter, initialized as an empty string.
+//   const [movies, setMovies] = useState([]); // State to hold the list of movies, initialized as an empty array.
+//   const [searchQuery, setSearchQuery] = useState("");
+//   const [selectedGenre, setSelectedGenre] = useState("All"); // State for the selected genre filter, default is "All".
+//   const [selectedRating, setSelectedRating] = useState("All"); // State for the selected rating filter, initialized as an empty string.
 
   useEffect(() => {
     // useEffect to fetch movies when the component mounts.
@@ -86,17 +84,17 @@ function MoviePage() {
   //dependency is the reactive value, when changed refires effect function
   //empty dependency only fires once
 
-  const handleSearch = (query) => setSearchQuery(query.toLowerCase()); // Function to handle search input, updates searchQuery state to lowercase.
+//   const handleSearch = (query) => setSearchQuery(query.toLowerCase()); // Function to handle search input, updates searchQuery state to lowercase.
 
-  const filteredMovies = movies.filter((movie) => {
-    // Filtering movies based on search, genre, and rating.
-    const matchesSearch = movie.name.toLowerCase().includes(searchQuery); // Checks if movie name includes the search query.
-    const matchesGenre =
-      selectedGenre === "All" || movie.genre === selectedGenre; // Checks if genre matches the selected genre.
-    const matchesRating =
-      selectedRating === "All" || movie.rating === parseInt(selectedRating); // Checks if rating matches the selected rating.
-    return matchesSearch && matchesGenre && matchesRating; // Returns true if all conditions are met.
-  });
+//   const filteredMovies = movies.filter((movie) => {
+//     // Filtering movies based on search, genre, and rating.
+//     const matchesSearch = movie.name.toLowerCase().includes(searchQuery); // Checks if movie name includes the search query.
+//     const matchesGenre =
+//       selectedGenre === "All" || movie.genre === selectedGenre; // Checks if genre matches the selected genre.
+//     const matchesRating =
+//       selectedRating === "All" || movie.rating === parseInt(selectedRating); // Checks if rating matches the selected rating.
+//     return matchesSearch && matchesGenre && matchesRating; // Returns true if all conditions are met.
+//   });
 
   return (
     <main>

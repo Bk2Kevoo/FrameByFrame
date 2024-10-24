@@ -71,6 +71,14 @@
       "genre": "Action/Crime",
       "description": "Batman faces off against the Joker, a chaotic mastermind bent on plunging Gotham City into anarchy, testing the hero's moral limits like never before.",
       "price": 5.99
+    },
+    {
+      "id": "9158",
+      "name": "Beetle Juice",
+      "rating": 5,
+      "genre": "Family",
+      "price": 3,
+      "image": "blob:http://127.0.0.1:5173/0f64eaa7-b953-4acd-8863-e7d98c990b13"
     }
   ]
 }
